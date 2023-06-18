@@ -4,7 +4,7 @@ title: "👨‍💻 Code Arsenal"
 description: "Uniting Security Professionals to Combat Hackers with Code"
 logo: 'assets/images/log.png'
 favicon: 'assets/images/logo.png'
-baseurl: 
+baseurl: /CodeArsenal
 google_analytics: 'UA-46278016-1'
 disqus: 'code-arsenal'
 mailchimp-list: 'https://infooby.us15.list-manage.com/subscribe?u=78960f5d7fece3e84decf79f1&id=35c4b947ef'
