@@ -3,7 +3,7 @@ layout: post
 title: "How to Detect & Fix SSRF in Python Django"
 author: rohitcoder
 categories: [ SSRF ]
-tags: [ python, ssrf ]
+tags: [ python, django, ssrf ]
 image: https://i.imgur.com/Ux7w6Cn.png
 featured: true
 hidden: false
@@ -21,9 +21,9 @@ SSRF occurs when an attacker manipulates a server into making unintended request
 -------------------
 The impact of an SSRF vulnerability can be severe:
 
-1. Unauthorized data access: Attackers can abuse SSRF to retrieve sensitive data from internal systems, such as databases, file servers, or cloud services.
-2. Service disruption: SSRF can cause denial-of-service (DoS) attacks by overwhelming external systems with requests, impacting their availability.
-3. Remote code execution: By leveraging SSRF, attackers can execute arbitrary code on internal systems, leading to further compromise or lateral movement within the network.
+1. **Unauthorized data access**: Attackers can abuse SSRF to retrieve sensitive data from internal systems, such as databases, file servers, or cloud services.
+2. **Service disruption**: SSRF can cause denial-of-service (DoS) attacks by overwhelming external systems with requests, impacting their availability.
+3. **Remote code execution**: By leveraging SSRF, attackers can execute arbitrary code on internal systems, leading to further compromise or lateral movement within the network.
 
 **_Scenarios and Industry Standards_**
 ---------------------------------------
