@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Detect & Fix SSRF in Python"
+title:  "How to Detect & Fix SSRF in PHP"
 author: rohitcoder
 categories: [ SSRF ]
 tags: [ python, ssrf ]
