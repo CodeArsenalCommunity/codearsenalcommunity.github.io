@@ -117,10 +117,12 @@ section.recent-posts {
 }
 
 .maxthumb {
-    height: 300px;
+    max-height: 300px;
     overflow: hidden;
 }
-
+.maxthumb img {
+    height: 250px;
+}
 .listfeaturedtag .card,
 .card-footer {
     border: 0;
