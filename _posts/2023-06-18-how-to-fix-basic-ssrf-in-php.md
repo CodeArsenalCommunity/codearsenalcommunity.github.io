@@ -52,7 +52,7 @@ In this code, the user-supplied URL is used directly in the ``file_get_contents(
 
 **Mitigating SSRF Vulnerabilities**
 ------------------------------------
-1. Implement strict input validation: Validate user-supplied URLs to ensure they conform to expected patterns. Leverage libraries or regular expressions to enforce proper URL formats, including whitelisting or blacklisting certain domains. 
+- Implement strict input validation: Validate user-supplied URLs to ensure they conform to expected patterns. Leverage libraries or regular expressions to enforce proper URL formats, including whitelisting or blacklisting certain domains. 
 Here's an example of secure source code that validates the URL using regular expressions
 
 ```php
@@ -68,7 +68,7 @@ if (preg_match($pattern, $url)) {
 }
 ?>
 ```
-2. Apply a whitelist approach: Maintain a whitelist of allowed external resources and validate user-supplied URLs against this list. Only fetch resources explicitly allowed, preventing access to internal or unauthorized resources.
+- Apply a whitelist approach: Maintain a whitelist of allowed external resources and validate user-supplied URLs against this list. Only fetch resources explicitly allowed, preventing access to internal or unauthorized resources.
 ```php
 <?php
 $allowedDomains = ['example.com', 'api.example.com'];
@@ -82,7 +82,7 @@ if (in_array($parsedUrl['host'], $allowedDomains)) {
 }
 ?>
 ```
-3. Utilize URL parsers: Instead of relying on simple string manipulation, use built-in URL parsing libraries provided by the programming language. These libraries handle edge cases and ensure proper validation of URL components.
+- Utilize URL parsers: Instead of relying on simple string manipulation, use built-in URL parsing libraries provided by the programming language. These libraries handle edge cases and ensure proper validation of URL components.
 ```php
 <?php
 $url = $_GET['url'];
