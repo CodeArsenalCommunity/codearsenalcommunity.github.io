@@ -4,7 +4,7 @@ title: "How to Detect & Fix SSRF in Java"
 author: rohitcoder
 categories: [ SSRF ]
 tags: [ java, ssrf ]
-image: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*uvG9fizM5_XcZ8ic.png
+image: https://cheatsheetseries.owasp.org/assets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet_Case1_NetworkLayer_PreventFlow.png
 featured: true
 hidden: false
 ---
