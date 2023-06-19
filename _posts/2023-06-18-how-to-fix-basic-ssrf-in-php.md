@@ -96,7 +96,7 @@ if ($parsedUrl !== false && isset($parsedUrl['scheme'], $parsedUrl['host'])) {
 }
 ?>
 ```
-4. Implement network-level protections: Employ firewalls or proxy servers to restrict outbound requests from the application server. Configure these security measures to block requests to sensitive or internal IP addresses.
+- Implement network-level protections: Employ firewalls or proxy servers to restrict outbound requests from the application server. Configure these security measures to block requests to sensitive or internal IP addresses.
 
 **SSRF and Compliance Audits**
 -------------------------------
