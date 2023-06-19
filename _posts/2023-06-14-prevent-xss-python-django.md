@@ -75,8 +75,8 @@ CSP_DEFAULT_SRC = ("'self'",)
 ```
 - Use template filters: Django provides template filters for escaping and sanitizing user-generated content. Use filters such as safe and escape to ensure proper encoding and protection against XSS.
 
-```
-{{ comment|safe }}
+```python
+{{{ comment|safe }}}
 ```
 - Input validation and sanitization: Implement input validation and sanitization routines to ensure that user inputs conform to expected patterns and do not contain malicious scripts or HTML code. Utilize Django's form validation and data cleaning mechanisms to validate and sanitize user inputs.
 
