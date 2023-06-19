@@ -52,7 +52,8 @@ In this code, the user-supplied URL is used directly in the ``file_get_contents(
 
 **Mitigating SSRF Vulnerabilities**
 ------------------------------------
-1. Implement strict input validation: Validate user-supplied URLs to ensure they conform to expected patterns. Leverage libraries or regular expressions to enforce proper URL formats, including whitelisting or blacklisting certain domains. Here's an example of secure source code that validates the URL using regular expressions:
+1. Implement strict input validation: Validate user-supplied URLs to ensure they conform to expected patterns. Leverage libraries or regular expressions to enforce proper URL formats, including whitelisting or blacklisting certain domains. 
+Here's an example of secure source code that validates the URL using regular expressions
 ```php
 <?php
 $url = $_GET['url'];
