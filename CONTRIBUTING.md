@@ -23,7 +23,7 @@ git clone https://github.com/<YOUR_USERNAME>/codearsenalcommunity.github.io.git
 
 ### Author Profile
 
-If you are contributing for the first time, please add your profile details under the author tag in _config.yml.
+If you are contributing for the first time, please add your profile details under the author tag in _config.yml
 
 ### Submitting Your Contribution
 

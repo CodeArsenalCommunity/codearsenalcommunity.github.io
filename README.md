@@ -11,9 +11,6 @@
 
 ### Contribute
 
-1. [Fork the repo](https://github.com/CodeArsenalCommunity/codearsenalcommunity.github.io/fork).
-2. Clone a copy of your fork on your local
-3. Create a branch off of main and give it a meaningful name (e.g. python-xss-writeup).
-4. Make necessary changes, commit, push and open a pull request on GitHub.
+Please go through the [contributing guidelines](https://github.com/CodeArsenalCommunity/codearsenalcommunity.github.io/blob/main/CONTRIBUTING.md) before you start, and let us know if you have any challenges or questions.
 
 Thank you!
