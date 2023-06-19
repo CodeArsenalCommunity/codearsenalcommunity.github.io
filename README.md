@@ -1,15 +1,11 @@
-# Mediumish - Jekyll Theme
+# 👨‍💻 Code Arsenal - Uniting Security Professionals to Combat Hackers with Code
 
-[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/template-mediumish-bootstrap-jekyll/) &nbsp; | &nbsp; [Buy me a coffee](https://www.wowthemes.net/donate/)
+[Live Demo](https://codearsenalcommunity.github.io/) &nbsp; | &nbsp; [How to Contribute](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Contact](https://www.linkedin.com/in/rohitcoder/)
 
 ![mediumish](assets/images/mediumish-jekyll-template.png)
 
 
-### Copyright
-
-Copyright (C) 2019 Sal, https://www.wowthemes.net
-
-**Mediumish for Jekyll** is designed and developed by [Sal](https://www.wowthemes.net) and it is *free* under MIT license. 
+**Code Arsenal** is maintained by [Rohit](https://github.com/rohitcoder)
 
 <a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
