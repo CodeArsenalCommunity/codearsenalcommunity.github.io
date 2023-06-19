@@ -5,7 +5,7 @@ author: rohitcoder
 categories: [ SSRF ]
 tags: [ java, ssrf ]
 image: https://cheatsheetseries.owasp.org/assets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet_Case1_NetworkLayer_PreventFlow.png
-featured: true
+featured: false
 hidden: false
 ---
 
