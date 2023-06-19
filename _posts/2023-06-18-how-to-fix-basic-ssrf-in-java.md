@@ -100,6 +100,7 @@ public class SSRFExample {
 }
 ```
 - Apply a whitelist approach: Maintain a whitelist of allowed external resources and validate user-supplied URLs against this list. Only fetch resources explicitly allowed, preventing access to internal or unauthorized resources.
+
 ```java
 import java.net.URL;
 import java.util.Arrays;
@@ -131,6 +132,7 @@ public class SSRFExample {
 }
 ```
 - Utilize URL parsers: Instead of relying on simple string manipulation, use built-in URL parsing libraries provided by Java, such as the ``java.net.URL`` class. These libraries handle edge cases and ensure proper validation of URL components.
+
 ```java
 import java.net.URL;
 import java.net.MalformedURLException;
