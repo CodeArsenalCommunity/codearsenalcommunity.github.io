@@ -110,12 +110,12 @@ def fetch_url(request):
 ---------------------------------------
 To assist in mitigating SSRF vulnerabilities in your Python Django applications, you can leverage various Python libraries that provide helpful functionalities and security measures. Here are some recommended libraries:
 1. **Requests** - Requests is a widely-used Python library for making HTTP requests. It provides a convenient and secure way to send HTTP requests, allowing you to implement input validation and handle SSRF scenarios safely.
-Link: https://docs.python-requests.org
+Link: [https://docs.python-requests.org](https://docs.python-requests.org)
 2. **URLLib3** - URLLib3 is a powerful library that provides URL parsing and validation capabilities. It enables you to parse and validate URLs, ensuring that they adhere to expected patterns and preventing SSRF vulnerabilities. 
-Link: https://urllib3.readthedocs.io
-3. **Django URL Check** - Django URL Check is a Django library that provides utilities to validate URLs. It allows you to perform URL validation using regular expressions or custom validators, ensuring that only safe URLs are processed. Link: https://pypi.org/project/django-url-check
-4. **Talisker** - Talisker is a Python library designed to enhance the security of web applications. It provides protection against SSRF attacks by implementing strict input validation and URL whitelisting techniques. Link: https://pypi.org/project/talisker
-5. **OWASP Python Security** - OWASP Python Security is a collection of security-related functions and tools specifically tailored for Python applications. It includes features that can help you prevent SSRF vulnerabilities and other common security issues. Link: https://www.owasp.org/index.php/OWASP_Python_Security_Project
+Link: [https://urllib3.readthedocs.io](https://urllib3.readthedocs.io)
+3. **Django URL Check** - Django URL Check is a Django library that provides utilities to validate URLs. It allows you to perform URL validation using regular expressions or custom validators, ensuring that only safe URLs are processed. Link: [https://pypi.org/project/django-url-check](https://pypi.org/project/django-url-check)
+4. **Talisker** - Talisker is a Python library designed to enhance the security of web applications. It provides protection against SSRF attacks by implementing strict input validation and URL whitelisting techniques. Link: [https://pypi.org/project/talisker](https://pypi.org/project/talisker)
+5. **OWASP Python Security** - OWASP Python Security is a collection of security-related functions and tools specifically tailored for Python applications. It includes features that can help you prevent SSRF vulnerabilities and other common security issues. Link: [https://www.owasp.org/index.php/OWASP_Python_Security_Project](https://www.owasp.org/index.php/OWASP_Python_Security_Project)
 
 These libraries can be integrated into your Python Django applications to enhance security measures, validate URLs, and prevent SSRF vulnerabilities. Make sure to review the documentation and examples provided by each library to understand how to utilize them effectively.
 
