@@ -5,7 +5,7 @@ author: rohitcoder
 categories: [ SSRF ]
 tags: [ php, ssrf ]
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*uvG9fizM5_XcZ8ic.png
-featured: true
+featured: false
 hidden: false
 ---
 
