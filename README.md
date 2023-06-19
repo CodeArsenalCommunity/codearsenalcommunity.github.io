@@ -1,6 +1,6 @@
 # 👨‍💻 Code Arsenal - Uniting Security Professionals to Combat Hackers with Code
 
-[Live Demo](https://codearsenalcommunity.github.io/) &nbsp; | &nbsp; [How to Contribute](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Contact](https://www.linkedin.com/in/rohitcoder/)
+[Code Arsenal community](https://codearsenalcommunity.github.io/) &nbsp; | &nbsp; [How to Contribute](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Contact](https://www.linkedin.com/in/rohitcoder/)
 
 ![mediumish](assets/images/mediumish-jekyll-template.png)
 
