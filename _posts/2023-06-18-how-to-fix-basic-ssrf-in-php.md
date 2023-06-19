@@ -98,9 +98,6 @@ if ($parsedUrl !== false && isset($parsedUrl['scheme'], $parsedUrl['host'])) {
 ```
 - Implement network-level protections: Employ firewalls or proxy servers to restrict outbound requests from the application server. Configure these security measures to block requests to sensitive or internal IP addresses.
 
-**SSRF and Compliance Audits**
--------------------------------
-SSRF vulnerabilities can have implications during compliance audits. Organizations adhering to standards such as PCI DSS, GDPR, or industry frameworks like NIST Cybersecurity Framework are expected to address SSRF and web application vulnerabilities to ensure the protection of sensitive data and compliance requirements.
 
 **WAF Rules:**
 - Implement a Web Application Firewall (WAF) that includes rules specifically designed to detect and block SSRF attacks. WAFs can analyze incoming requests and block those that exhibit SSRF patterns.
@@ -121,6 +118,10 @@ SSRF vulnerabilities can have implications during compliance audits. Organizatio
 - Educate developers and conduct security training to raise awareness about SSRF vulnerabilities and best practices for secure coding.
 
 By implementing WAF rules, leveraging Cloudflare's protection features, and following monitoring and prevention tips, you can significantly reduce the risk of SSRF vulnerabilities and enhance the security of your web application.
+
+**SSRF and Compliance Audits**
+-------------------------------
+SSRF vulnerabilities can have implications during compliance audits. Organizations adhering to standards such as PCI DSS, GDPR, or industry frameworks like NIST Cybersecurity Framework are expected to address SSRF and web application vulnerabilities to ensure the protection of sensitive data and compliance requirements.
 
 **Conclusion**
 ---------------
