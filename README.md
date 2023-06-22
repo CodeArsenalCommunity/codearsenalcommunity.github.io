@@ -2,7 +2,7 @@
 
 [Code Arsenal community](https://codearsenalcommunity.github.io/) &nbsp; | &nbsp; [How to Contribute](https://github.com/CodeArsenalCommunity/codearsenalcommunity.github.io/blob/main/CONTRIBUTING.md) &nbsp; | &nbsp; [Contact](https://www.linkedin.com/in/rohitcoder/)
 
-![mediumish](assets/images/mediumish-jekyll-template.png)
+![mediumish](assets/images/screenshot.png)
 
 
 **Code Arsenal** is maintained by [Rohit](https://github.com/rohitcoder)
