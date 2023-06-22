@@ -5,8 +5,8 @@ author: rohitcoder
 categories: [ XXE ]
 tags: [ php, security ]
 image: https://i.imgur.com/nJmbDu5.png
-featured: true
-hidden: false
+featured: false
+hidden: true
 ---
 
 **Introduction**
