@@ -4,7 +4,7 @@ title:  "How to Detect & Fix XXE in PHP"
 author: rohitcoder
 categories: [ XXE ]
 tags: [ php, security ]
-image: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*uvG9fizM5_XcZ8ic.png
+image: https://i.imgur.com/nJmbDu5.png
 featured: true
 hidden: false
 ---
