@@ -5,7 +5,7 @@ author: rohitcoder
 categories: [ XSS ]
 tags: [ php, security ]
 image: https://i.imgur.com/d7ViWUu.png
-featured: true
+featured: false
 hidden: false
 ---
 
@@ -66,7 +66,6 @@ In this code, the user-supplied ``$name`` parameter is directly echoed into an H
 
 **Conclusion**
 --------------
-
 Detecting and fixing XSS vulnerabilities is crucial for ensuring the security of your PHP applications. By validating and sanitizing user inputs, implementing proper output encoding, and leveraging additional security measures like Content Security Policy, you can significantly reduce the risk of XSS attacks.
 
 Remember to stay up-to-date with the latest security best practices and regularly test your applications for vulnerabilities. By prioritizing security throughout the development lifecycle, you can protect your users and safeguard your web applications from XSS attacks.
