@@ -8,9 +8,9 @@
 
 <title>{{ page.title }} | {{site.name}}</title>
 
-{{ % if page.url == "/" % }}
-    {{ % seo % }}
-{{ % else % }}
+{% if page.url != "/" %}
+    {% seo %}
+{% else %}
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://codearsenalcommunity.github.io">
@@ -27,7 +27,8 @@
   <meta name="twitter:description" content="At Code Arsenal, we believe that by sharing detailed fixes for security vulnerabilities in various programming languages and discussing different approaches, we can empower programmers to better understand the mindset of hackers and security engineers. Through this understanding, they can effectively work on fixing critical security bugs and preventing them in the future.">
   <meta name="twitter:image" content="https://i.imgur.com/exYg6la.png">
 
-{{ % endif % }}
+{% endif %}
+
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
