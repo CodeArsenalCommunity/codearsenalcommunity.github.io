@@ -15,6 +15,7 @@ comments: false
     <h4>Contact</h4>
     <p>If you have any questions or would like to contribute to Code Arsenal, please reach out to the lead maintainer of this project. They will provide you with the necessary information and guidance to get started.</p>
     </div>
+    <!--
     <div class="col-md-4">
         <div class="sticky-top sticky-top-80">
             <h5>Support Code Arsenal</h5>
@@ -22,6 +23,7 @@ comments: false
             <a target="_blank" href="https://www.example-donation-link.com" class="btn btn-danger">Donate</a> <a target="_blank" href="https://github.com/code-arsenal/documentation" class="btn btn-warning">Contribute</a>
         </div>
     </div>
+    -->
 </div>
 
 
