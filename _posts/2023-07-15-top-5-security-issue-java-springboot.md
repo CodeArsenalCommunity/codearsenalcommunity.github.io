@@ -22,17 +22,17 @@ Java Spring Boot has gained immense popularity for developing robust and scalabl
 **Vulnerable Code:**
 Consider the following vulnerable code in a Spring MVC controller:
     
-    ```java
-        @Controller
-        public class UserController {
+```java
+    @Controller
+    public class UserController {
 
-            @GetMapping("/user")
-            public String getUser(@RequestParam("name") String name, Model model) {
-                model.addAttribute("name", name);
-                return "user";
-            }
+        @GetMapping("/user")
+        public String getUser(@RequestParam("name") String name, Model model) {
+            model.addAttribute("name", name);
+            return "user";
         }
-    ```
+    }
+```
 In this code, the user-supplied ``name`` parameter is directly included in the response without proper encoding.
 
 **Fix and Mitigation:**
