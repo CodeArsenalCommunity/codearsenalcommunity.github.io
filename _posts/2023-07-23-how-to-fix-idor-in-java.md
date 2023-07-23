@@ -18,7 +18,7 @@ Insecure Direct Object References (IDOR) is a critical security vulnerability th
 -----------------------
 Insecure Direct Object References occur when an application allows direct access to internal resources (e.g., files, database records) without proper access controls. Attackers can exploit IDOR to access sensitive information or perform actions that should be restricted to certain users, leading to data leaks, unauthorized disclosure, or even full system compromise.
 
-**Impact of SSRF**
+**Impact of IDOR**
 -------------------
 Consider a simple Java web application that displays user details based on the provided user ID. The application allows users to view their profile by providing their ID as a URL parameter.
 
