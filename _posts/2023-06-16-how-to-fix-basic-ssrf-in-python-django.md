@@ -5,7 +5,7 @@ author: rohitcoder
 categories: [ SSRF ]
 tags: [ python, django, ssrf ]
 image: https://i.imgur.com/Ux7w6Cn.png
-featured: true
+featured: false
 hidden: false
 ---
 
