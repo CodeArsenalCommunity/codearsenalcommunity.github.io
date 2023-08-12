@@ -5,7 +5,7 @@ author: rohitcoder
 categories: [ XSS ]
 tags: [ java, xss ]
 image: https://i.imgur.com/FagRpPD.png
-featured: true
+featured: false
 hidden: false
 ---
 
