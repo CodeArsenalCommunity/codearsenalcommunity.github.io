@@ -5,7 +5,7 @@ author: rohitcoder
 categories: [ Kubernetes ]
 tags: [ kubernetes, owasp, security, devops ]
 image: https://i.imgur.com/CEvrPQa.png
-featured: false
+featured: true
 hidden: false
 ---
 
@@ -16,7 +16,6 @@ Kubernetes has become a cornerstone in modern application deployment, but its in
 
 
 ## 1. Inadequate Authentication and Authorization
----------------------------------------------------
 
 **Attack Scenario:**
 An attacker with unauthorized access to a Kubernetes API server can potentially gain control over the entire cluster, deploying malicious containers or accessing sensitive data.
@@ -32,7 +31,7 @@ An attacker with unauthorized access to a Kubernetes API server can potentially 
 
 
 ## 2. Misconfigured Security Contexts
---------------------------------------
+
 **Attack Scenario:**
 A misconfigured security context allows a malicious container to run with excessive privileges, compromising the node and other containers.
 
@@ -47,7 +46,7 @@ A misconfigured security context allows a malicious container to run with excess
 
 
 ## 3. Vulnerable Container Images
--------------------------------
+
 
 **Attack Scenario:**
 Inclusion of vulnerable or unverified container images may expose the cluster to malicious code execution and data breaches.
@@ -64,7 +63,7 @@ Inclusion of vulnerable or unverified container images may expose the cluster to
 
 
 ## 4. Insecure Network Policies
--------------------------------
+
 
 **Attack Scenario:**
 An attacker can move laterally across pods if network policies are not properly configured, leading to unauthorized access.
@@ -81,7 +80,7 @@ An attacker can move laterally across pods if network policies are not properly 
 
 
 ## 5. Unauthorized Access to Secrets
---------------------------------------
+
 
 **Attack Scenario:**
 If secrets are not adequately secured, an attacker can access sensitive information such as passwords or API tokens stored in Kubernetes secrets.
@@ -97,7 +96,7 @@ If secrets are not adequately secured, an attacker can access sensitive informat
 
 
 ## 6. Insufficient Logging and Monitoring
--------------------------------------------
+
 
 **Attack Scenario:**
 Without proper logging and monitoring, malicious activities within the cluster can go unnoticed, delaying incident response.
@@ -114,7 +113,7 @@ Without proper logging and monitoring, malicious activities within the cluster c
 
 
 ## 7. Privilege Escalation
----------------------------
+
 
 **Attack Scenario:**
 An attacker exploiting privilege escalation vulnerabilities can gain unauthorized control over a node or cluster.
@@ -130,7 +129,7 @@ Configuration Steps:
 
 
 ## 8. Data Exposure and Leakage
--------------------------------
+
 
 **Attack Scenario:**
 Misconfigured pod security policies may allow unauthorized access to sensitive data or communication between pods.
@@ -146,7 +145,7 @@ Misconfigured pod security policies may allow unauthorized access to sensitive d
 
 
 ## 9. Insecure API Server
----------------------------
+
 
 **Attack Scenario:**
 An insecurely configured Kubernetes API server can expose sensitive cluster data and become a target for attackers.
@@ -162,7 +161,7 @@ An insecurely configured Kubernetes API server can expose sensitive cluster data
 
 
 ## 10. Inadequate Updates and Patching
----------------------------------------
+
 
 **Attack Scenario:**
 Outdated Kubernetes components may contain known vulnerabilities that attackers can exploit.
