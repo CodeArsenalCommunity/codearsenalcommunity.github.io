@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fixing OWASP Top 10 Kubernetes Security Issues"
+title: "Let's fix OWASP Top 10 Kubernetes Security Issues"
 author: rohitcoder
 categories: [ Kubernetes ]
 tags: [ kubernetes, owasp, security, devops ]
