@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fixing a $6,000 XSS, A Case Study of Yelp.com"
-author: [rohitcoder]
+author: rohitcoder
 categories: [XSS]
 tags: [security, xss, javascript]
 image: https://i.imgur.com/IXVjp83.jpg
