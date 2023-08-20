@@ -13,11 +13,11 @@ hidden: false
 -----------------
 Cross-Site Scripting (XSS) is a critical web application vulnerability that can lead to unauthorized access, data theft, and the compromise of user accounts. In this article, we will explore the detection and prevention of XSS vulnerabilities in Java web applications. We will cover the basics of XSS, its impact on application security, common attack vectors, and effective mitigation techniques.
 
-**Understanding SSRF**
+**Understanding XSS**
 -----------------------
 Cross-Site Scripting (XSS) occurs when an attacker injects malicious scripts or HTML code into a web application, which is then executed in the user's browser. This vulnerability arises due to insufficient input validation or improper handling of user-generated content, allowing attackers to bypass security measures and manipulate the application's behavior.
 
-**Impact of SSRF**
+**Impact of XSS**
 -------------------
 The impact of an XSS vulnerability can be severe:
 
