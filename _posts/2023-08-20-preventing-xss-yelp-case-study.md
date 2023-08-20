@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Fixing a $6,000 XSS, A Case Study of Yelp.com"
-author: [Your Name]
-categories: [Vulnerability Report]
+author: [rohitcoder]
+categories: [XSS]
 tags: [security, xss, javascript]
 image: https://i.imgur.com/IXVjp83.jpg
-featured: true
+featured: false
 hidden: false
 ---
 
