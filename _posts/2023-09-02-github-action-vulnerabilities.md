@@ -9,8 +9,6 @@ featured: false
 hidden: false
 ---
 
-# Securing GitHub Actions: Understanding Unpinnable Actions
-
 In this article, we'll explore the security of GitHub Actions. These are like digital helpers for automating tasks in software creation. They're great, but they come with security challenges. We'll focus on a specific problem called "unpinnable actions" and show you how to keep your workflows safe.
 
 ## Why Pinning Matters
