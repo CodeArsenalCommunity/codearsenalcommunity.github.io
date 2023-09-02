@@ -1,58 +1,126 @@
 ---
 layout: post
-title: "Defending GitHub Actions: Battling Unpinnable Action Vulnerabilities"
+title: "Securing GitHub Actions: Understanding Unpinnable Actions"
 author: rohitcoder
-categories: [ GitHub Actions, Security ]
-tags: [ GitHub, Actions, Security, Supply Chain Attacks ]
+categories: [GitHub Actions, Security]
+tags: [GitHub, CI/CD, Security, Unpinnable Actions]
 image: https://i.imgur.com/xBNyQ60.png
 featured: false
 hidden: false
 ---
 
-## Introduction
+# Securing GitHub Actions: Understanding Unpinnable Actions
 
-GitHub Actions, a versatile tool for automating software development workflows, has become indispensable for many developers. However, with the power of automation comes the responsibility to ensure the security of your workflows. In this article, we will delve into a crucial aspect of GitHub Actions security – mitigating the risks associated with "unpinnable actions." We will explore detailed strategies for prevention, detection, and response to protect your workflows against potential supply chain attacks and security vulnerabilities.
+In this article, we'll explore the security of GitHub Actions. These are like digital helpers for automating tasks in software creation. They're great, but they come with security challenges. We'll focus on a specific problem called "unpinnable actions" and show you how to keep your workflows safe.
 
-## Understanding Action Pinning
+## Why Pinning Matters
 
-GitHub Actions offer a flexible way to automate various aspects of your software development process, such as testing, code linting, and deployment. When incorporating third-party actions into your workflows, GitHub strongly recommends "action pinning." Action pinning involves specifying a specific commit SHA for each action, ensuring that you consistently use a known, audited version of the action. This practice is essential for preventing supply chain attacks where malicious code could be introduced into external software used by your project.
+GitHub Actions help automate tasks like testing and deploying software. When you use actions made by others, it's crucial to **"pin" them to a specific version**. This means you lock them to a particular edition to prevent sneaky attacks.
 
-## The Challenge of Unpinnable Actions
+Pinning makes sure you always use the same version. This is a security recommendation to make sure your work is safe.
 
-While action pinning is a crucial security measure, it is not always foolproof. Attackers have discovered ways to exploit "unpinnable actions," even when actions are pinned. These unpinnable actions can introduce new code into your pipeline, allowing attackers to execute malicious code and potentially compromise your repository and production environment.
+![Figure 1](https://i.imgur.com/UNU2uPT.png)
+*Figure 1: A safe, pinned version of a third-party action in a GitHub Actions workflow.*
 
-## Prevention Strategies
+This seems like a great way to stay safe from attacks. But, as you'll see, it's not perfect.
 
-1. **Comprehensive Action Pinning**: Although not a guarantee, action pinning is still a recommended practice. Pin all actions used within your organization to reduce the risk of direct compromises to action repositories. Be diligent in ensuring that even complex workflows pin their actions to specific commit SHAs.
+## How Attackers Exploit Unpinnable Actions
 
-2. **Use Immutable Docker Images**: For actions that rely on Docker containers, consider using immutable images with fixed digests rather than mutable tags like "latest." Immutable images provide greater control over the environment and reduce the risk of unexpected changes.
+Let's talk about actions that can introduce harmful code to your projects, even if you've "pinned" them. We call these "unpinnable actions."
 
-3. **Custom Action Development**: When developing your own actions, design them to be "pinnable." Ensure that all dependencies and external resources used by the action are locked to specific immutable versions, minimizing the risk of changes impacting your workflows.
+To understand this, let's look at an example:
 
-4. **Access Control and Authentication**: Implement strict access controls and authentication mechanisms for your GitHub repositories and actions. Limit access to only authorized individuals or systems to reduce the chances of unauthorized changes.
+![Figure 2](https://i.imgur.com/4P59cXc.png)
+*Figure 2: An example workflow using the pyupio/safety action, pinned to a specific version.*
 
-## Detection Strategies
+Imagine a workflow called "CI" that uses a third-party action called "pyupio/safety." It's pinned to a specific version, so you'd expect it to always use the same code.
 
-1. **Continuous Mapping**: Continuously monitor and map all actions and their dependencies used in your workflows. Establish a process for tracking changes and updates to actions to identify any unexpected modifications.
+But when you look at the action's code, it pulls the latest version of a Docker image named "pyupio/safety-v2-beta" from the internet. This image becomes the environment where the workflow runs.
 
-2. **Alerting and Monitoring**: Set up alerts and monitoring systems to detect unusual behavior or unexpected code changes in your workflows. Unusual activity patterns or unauthorized access attempts should trigger alerts for immediate investigation.
+![Figure 3](https://i.imgur.com/uVYdKpp.png)
+*Figure 3: The action.yaml file of pyupio/safety pulls a changing Docker image with the 'latest' tag.*
 
-3. **Audit Trail**: Maintain an audit trail of actions and changes made to workflows. This historical data can be invaluable for identifying and tracing any security incidents or unauthorized alterations.
+Docker images use a "pinning" concept based on a unique code. The action gets the "latest" tag, which can change. Even though you "pinned" the action's code, the environment it runs in can look different each time.
 
-4. **Behavior Anomalies**: Develop anomaly detection mechanisms that analyze the behavior of actions during workflow execution. Look for deviations from the expected behavior, such as unexpected resource accesses or changes to action behavior.
+![Figure 4](https://i.imgur.com/0RzMWjc.png)
+*Figure 4: An attacker can trick action pinning by using a harmful Docker image with the "latest" tag.*
 
-## Response Strategies
+If attackers take control of the "pyupio/safety-v2-beta" image, they can put bad code in it. This code will run in your workflow, even though you "pinned" the action's code. That's how they can attack your project.
 
-1. **Immediate Isolation**: If a suspicious activity or code change is detected, immediately isolate the affected workflow or action to prevent further compromise. This may involve temporarily disabling the workflow or removing the compromised action.
+## Types of Unpinnable Actions
 
-2. **Forensic Analysis**: Conduct a thorough forensic analysis to understand the extent of the security incident. Identify the scope of the compromise, including any potential data breaches or code alterations.
+Let's look at three types of actions - Docker container, composite, and JavaScript - and how attackers can bypass action pinning.
 
-3. **Action Rollback**: If possible, roll back the affected actions to their last known secure versions. This may involve reverting to previously pinned commit SHAs or restoring immutable images.
+### Docker Container Actions
 
-4. **Security Patching**: If the compromise involves a known security vulnerability, apply patches or updates to affected components promptly. Ensure that action dependencies are up to date and free from vulnerabilities.
+Docker containers are like customized environments for actions. They're useful when you need specific tools or setups. These containers can be fetched from the internet or built on the spot.
 
-5. **Communication and Reporting**: Communicate the security incident to relevant stakeholders, including your team, users, and GitHub support. Report any suspicious activity to GitHub's security team for further investigation.
+![Figure 5](https://i.imgur.com/AcOy6iB.png)
+*Figure 5: The Dockerfile of an action with unverified dependencies.*
+
+As you can see in Figure 5, the process of building these containers can sometimes install software without checking if it's safe. This goes against the idea of pinning actions for security.
+
+### Composite Actions
+
+Composite actions are like shortcuts for simple tasks. They let you write code directly in your project files. But if you're not careful, they can break action pinning. Look at this example:
+
+![Figure 6](https://i.imgur.com/m2R3TDk.png)
+*Figure 6: A composite action that uses another action without pinning it to a specific version.*
+
+This action uses another third-party action called "BrianPugh/install-micropython," but it doesn't pin it to a specific version. If attackers mess with "BrianPugh/install-micropython," your project becomes vulnerable.
+
+There's another example with an action.yaml file that uses an NPM package without locking its version. Attackers can change this package, and your project can get hurt.
+
+![Figure 7](https://i.imgur.com/Q8PebV6.png)
+*Figure 7: A composite action that uses an unverified NPM package.*
+
+### JavaScript Actions
+
+JavaScript actions (sometimes TypeScript) are harder to break with pinning, but they can still fetch things from the internet. Here's an example:
+
+![Figure 8](https://i.imgur.com/X4nnEfa.png)
+*Figure 8: A JavaScript action that downloads something from the internet without checking it.*
+
+Compared to other actions, JavaScript actions don't install new software, but they can get things from the internet. This makes them hard to pin for security.
+
+## Unpinnable Actions in the GitHub World
+
+GitHub Actions are popular in open-source and private projects. Many people use them, believing they're safe. To find out, we looked at the GitHub Marketplace. We found that 32% of the top-starred actions there were "unpinnable." This means they could still be risky even if you pinned them.
+
+![Figure 9](https://i.imgur.com/HQJQaVb.png)
+*Figure 9: 32% of the top-starred actions are unpinnable.*
+
+We also studied open-source projects on GitHub. Out of 2,000 projects with about 6,000 workflows, 67% were using "unpinnable" actions. So, even in open-source projects, the risk is high.
+
+![Figure 10](https://i.imgur.com/WefeELB.png)
+*Figure 10: 67% of open-source projects use unpinnable actions.*
+
+## How to Stay Safe
+
+Now that you know about "unpinnable" actions, let's talk about staying safe.
+
+### Prevention
+
+1. **Check and Lock Actions**: Regularly review actions you use, especially third-party ones. Make sure they're locked to a specific version.
+
+2. **Private Action Registry**: If possible, have your own action store. This gives you more control over action versions and reduces risks.
+
+### Detection
+
+1. **Keep an Eye**: Watch your GitHub Actions for strange behavior or changes in code.
+
+2. **Use Security Scanners**: Add tools to your pipeline to spot problems and odd behavior.
+
+### Response
+
+1. **Isolate and Investigate**: If you find something fishy, check it out and find the source.
+
+2. **Update and Fix**: If you confirm an issue, update affected actions and fix any problems.
 
 ## Conclusion
 
-While action pinning is a valuable security practice in GitHub Actions, it is not a one-size-fits-all solution. Attackers can still exploit "unpinnable actions" to execute malicious code within your workflows. To strengthen your GitHub Actions security, combine action pinning with thorough visibility, access controls, anomaly detection, and a well-defined incident response plan. By taking a proactive and comprehensive approach to security, you can better protect your projects from potential supply chain attacks and security vulnerabilities, ensuring the integrity of your development pipeline.
+Pinning actions is a smart move, but it's not perfect. Unpinnable actions can still put your project at risk. By following our advice on prevention, detection, and response, you can make GitHub Actions safer and avoid supply chain attacks.
+
+---
+
+*Original article by Yaron Avital. For more details, you can read the [original article here](https://www.paloaltonetworks.com/blog/prisma-cloud/unpinnable-actions-github-security/). Adapted and simplified by Rohit kumar.*
